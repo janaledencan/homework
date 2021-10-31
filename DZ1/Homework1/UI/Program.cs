@@ -1,6 +1,8 @@
 ﻿using System;
+using classLibrary;
 
-namespace WeatherFormulas
+
+namespace UI
 {
     class Program
     {
@@ -36,3 +38,4 @@ namespace WeatherFormulas
         }
     }
 }
+

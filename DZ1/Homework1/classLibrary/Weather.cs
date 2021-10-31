@@ -4,7 +4,7 @@ using System.Text;
 
 namespace classLibrary
 {
-    class Weather
+    public class Weather
     {
         private double temperature;
         private double windSpeed;
@@ -39,5 +39,16 @@ namespace classLibrary
             return (Constants.c1 + (Constants.c2 * temperature) + (Constants.c3 * relHumidity) + (Constants.c4 * temperature * relHumidity) + (Constants.c5 * Math.Pow(temperature, 2)) + (Constants.c6 * Math.Pow(relHumidity, 2)) + (Constants.c7 * Math.Pow(temperature, 2) * relHumidity) + (Constants.c8 * temperature * Math.Pow(relHumidity, 2)) + (Constants.c9 * Math.Pow(temperature, 2)* Math.Pow(relHumidity,2)));
         }
 
+        public double CalculateWindChill()
+        {
+            double windChillIndx = 13.12 + (0.6215 * temperature) - (11.37 * Math.Pow(windSpeed, 0.16)) + (0.3965 * temperature * Math.Pow(windSpeed, 0.16));
+
+            if (windChillIndx > this.temperature)
+            {
+                windChillIndx = 0;
+                return windChillIndx;
+            }
+            return windChillIndx;
+        }
     }
 }
