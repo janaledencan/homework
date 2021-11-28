@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class_Library", "Class_Library\Class_Library.csproj", "{580BE07C-EB40-484F-89F6-530B4BAE930F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleWeather_UI", "ConsoleWeather_UI\ConsoleWeather_UI.csproj", "{631D629E-14E0-41E0-BC90-7D7EEF9FFFB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{580BE07C-EB40-484F-89F6-530B4BAE930F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{580BE07C-EB40-484F-89F6-530B4BAE930F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{580BE07C-EB40-484F-89F6-530B4BAE930F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{580BE07C-EB40-484F-89F6-530B4BAE930F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{631D629E-14E0-41E0-BC90-7D7EEF9FFFB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{631D629E-14E0-41E0-BC90-7D7EEF9FFFB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{631D629E-14E0-41E0-BC90-7D7EEF9FFFB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{631D629E-14E0-41E0-BC90-7D7EEF9FFFB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5743E7B-9B55-4548-9F13-418897234113}
+	EndGlobalSection
+EndGlobal
