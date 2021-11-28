@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Class_Library
 {
-    class WeeklyForecast
+    public class WeeklyForecast
     {
         private DailyForecast[] weatherForSevenDays;
 
@@ -24,32 +24,7 @@ namespace Class_Library
                       $"{weatherForSevenDays[6].GetAsString()}";
         }
 
-        //Kod usporedbe pri traženju vremena s najvećom temperaturom koristiti
-        //odgovarajući preopterećeni relacijski operator (uspoređuje se prema temperaturi).
-
-        public static bool operator >(Weather firstValue, Weather secondValue)
-        {
-            double first = firstValue.GetTemperature();
-            double second = secondValue.GetTemperature();
-            return (first > second) ? true : false;
-
-        }
-
-        public static bool operator <(Weather firstValue, Weather secondValue)
-        {
-            return ((firstValue.GetTemperature()) < (secondValue.GetTemperature())) ? true : false;
-        }
-
-        public static bool operator <=(Weather firstValue, Weather secondValue)
-        {
-            return (firstValue.GetTemperature() < secondValue.GetTemperature()) ? true : false;
-        }
-
-        public static bool operator >=(Weather firstValue, Weather secondValue)
-        {
-            return (firstValue.GetTemperature() < secondValue.GetTemperature()) ? true : false;
-        }
-
+            
         public double GetMaxTemperature()
         {
             Weather maxTemperature = weatherForSevenDays[0].GetDayWeather();
@@ -60,10 +35,11 @@ namespace Class_Library
                 if (weatherForSevenDays[i].GetDayWeather() > maxTemperature)
                 {
                     maxTemperature = weatherForSevenDays[i].GetDayWeather();
-                }
-                return $"{maxTemperature.GetTemperature()}";
+                }    
             }
-
+            return maxTemperature.GetTemperature();
         }
+
+        public DailyForecast this[int index] { get { return weatherForSevenDays[index]; } }
     }
 }

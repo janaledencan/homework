@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Class_Library
 {
-    class Constatnts
+    class Constants
     {
         public static double c1 = -8.78469475556;
         public static double c2 = 1.61139411;

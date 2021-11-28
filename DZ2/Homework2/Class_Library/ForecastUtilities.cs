@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Class_Library
 {
-    class ForecastUtilities
+    public class ForecastUtilities
     {
         public static DailyForecast Parse(string forecast)
         {

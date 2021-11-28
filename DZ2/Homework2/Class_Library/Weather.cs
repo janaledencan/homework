@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Class_Library
 {
-    class Weather
+    public class Weather
     {
         private double temperature;
         private double windSpeed;
@@ -53,7 +53,30 @@ namespace Class_Library
 
         public string GetAsString()
         {
-            return $"T={temperature}°C, w={windSpeed}km / h, h={humidity}%";
+            return $" T={temperature}°C, w={windSpeed}km/h, h={humidity}%";
+        }
+
+        public static bool operator >(Weather firstValue, Weather secondValue)
+        {
+            double first = firstValue.GetTemperature();
+            double second = secondValue.GetTemperature();
+            return (first > second) ? true : false;
+
+        }
+
+        public static bool operator <(Weather firstValue, Weather secondValue)
+        {
+            return ((firstValue.GetTemperature()) < (secondValue.GetTemperature())) ? true : false;
+        }
+
+        public static bool operator <=(Weather firstValue, Weather secondValue)
+        {
+            return (firstValue.GetTemperature() < secondValue.GetTemperature()) ? true : false;
+        }
+
+        public static bool operator >=(Weather firstValue, Weather secondValue)
+        {
+            return (firstValue.GetTemperature() < secondValue.GetTemperature()) ? true : false;
         }
     }
 }

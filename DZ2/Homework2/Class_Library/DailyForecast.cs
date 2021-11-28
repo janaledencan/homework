@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Class_Library
 {
-    class DailyForecast
+    public class DailyForecast
     {
         private DateTime day;
         private Weather dayWeather;
@@ -20,7 +20,7 @@ namespace Class_Library
 
         public string GetAsString()
         {
-            return $"{day.ToString()}{dayWeather.GetAsString()}";
+            return $"{day.ToString("dd/MM/yyyy HH:mm:ss")}{dayWeather.GetAsString()}";
         }
     }
 }
