@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace ClassLibrary
@@ -14,5 +15,8 @@ namespace ClassLibrary
         {
             this.exceptionDate = exceptionDate;   
         }
+
+        public  NoSuchDailyWeatherException(string message, Exception innerException) : base(message,innerException){ }
+        protected NoSuchDailyWeatherException(SerializationInfo info, StreamingContext context) :base(info, context){ }
     }
 }
