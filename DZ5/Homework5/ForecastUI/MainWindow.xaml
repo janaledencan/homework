@@ -1,0 +1,180 @@
+﻿<Window x:Class="ForecastUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ForecastUI"
+        mc:Ignorable="d"
+        Title="Forecast"
+        Height="450" Width="700">
+
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+
+        </Grid.ColumnDefinitions>
+
+
+         <Grid.RowDefinitions>
+
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+
+         </Grid.RowDefinitions>
+
+            
+        <TextBlock 
+            Grid.Column="1" Grid.Row="0"
+            Margin="60,30,0,0"
+            HorizontalAlignment="Left"
+            FontSize="18"
+            TextAlignment="Right"
+            Text="Enter city: "/>
+        
+
+            <TextBox  x:Name="SearchCity" 
+                Width="250"
+                     Height="40"
+                 VerticalContentAlignment="Center"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Margin="150,25,0,0"
+                 Grid.Column="1" Grid.RowSpan="5" Text=""
+                 Style="{StaticResource RoundedTextbox}"/>
+
+        <Button Name="SaveTask"
+                Width="100"
+                Height="30"
+                Background="#A3ACBD"
+                Grid.Column="1" Grid.Row="0"
+                Margin="250,25,0,7"
+                Click="SearchTask_Click" Content="Search" />
+      
+        
+        <TextBlock Name="CityName"
+                   Height="25"
+                   Width="60"
+                   Margin="-100,-295,0,0"
+                   Grid.Column="1" Grid.Row="1"
+                 Text="" />
+        
+        <TextBlock Name="Country"
+                   Height="25"
+                   Width="60"
+                   Margin="100,-295,0,0"
+                   Grid.Column="1" Grid.Row="1"
+                 Text="" />
+        
+            <!--<StackPanel>-->
+            <StackPanel Orientation="Horizontal"
+                            Width="300"
+                            Height="150"
+                            Margin="0,-120,0,0"
+                            Grid.Row="1" Grid.Column="1">
+                    
+                    <Border Width="300"
+                            Height="150">
+
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#05f2bb" Offset="0.0"/><!--5bc3ff-->
+                                <GradientStop Color="#3aa0ff" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10"
+                                               RadiusY="10"
+                                               Rect="0,0,300,150"/>
+                            
+                        </Border.Clip>
+                
+
+                <TextBlock Name="WeatherMessage"
+                    Grid.Column="1" Grid.Row="1"
+                    Height="25"
+                    Width="60"
+                    Margin="0,120,0,0"/>
+                        
+            </Border>
+             </StackPanel>
+            <!--</StackPanel>-->
+
+            <Image x:Name="WeatherFoto"
+                    Grid.Column="1"
+                       Grid.Row="1"
+                       Height="100"
+                       Width="100"
+                       Margin="0,-125,0,0"/>
+        
+        
+            <StackPanel  Orientation="Horizontal"
+                         Grid.Row="1" Grid.Column="1">
+                
+                <Border Width="150"
+                        Height="50"
+                        Margin="60,200,0,0"
+                        Background="#FFEDCB"
+                        CornerRadius="10"/>
+                
+                <Border Width="150"
+                        Height="50"
+                        Margin="50,200,0,0"
+                        Background="#FFEDCB"
+                        CornerRadius="10"/>
+                
+                <Border Width="150"
+                        Height="50"
+                        Margin="50,200,0,0"
+                        Background="#FFEDCB"
+                        CornerRadius="10"/>
+                
+             </StackPanel>   
+        
+                <TextBlock Name="Temperature"
+                    Grid.Column="1" Grid.Row="1"
+                    Height="25"
+                    Width="60"
+                    Margin="-400,197,0,0"/>
+            
+
+                <TextBlock Name="Wind"
+                        Grid.Column="1" Grid.Row="1"
+                        Height="25"
+                        Width="60"
+                        Margin="0,197,0,0"/>
+             
+
+                <TextBlock Name="Humidity"
+                    Grid.Column="1" Grid.Row="1"
+                    Height="25"
+                    Width="60"
+                    Margin="400,197,0,0"/>
+
+       
+
+            <!--<Grid.Background>
+            <ImageBrush ImageSource="\Faks\3.semestar\Objektno orijentirano prog\Weather/weatherSimbols.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/path/to/weatherSimbols.png" Stretch="UniformToFill"/> 
+        </Grid.Background>-->
+
+            <!--<Border Height="300" Width="300" Background="Gray">
+            <Image Stretch="Fill" />
+            
+            <Grid Background="LightGreen" Margin="0,0,0.4,0.4">
+
+            </Grid>
+        </Border>-->
+
+            
+
+        </Grid>
+    
+
+</Window>
